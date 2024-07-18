@@ -5,10 +5,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    
+    <!-- Main Title -->
+    <header>
+        <h1 class="main-title font-weight">Kalkulator BMI</h1>
+    </header>
+
+    <main>
+        <!-- Left Content -->
+        <section class="main-content">
+            <!-- Main Article -->
+            <article>
+                <header>
+                    <h2 class="font-weight">Kalkulator</h2>
+                </header>
+
+                <p class="font-margin">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisis tubuh yang sehat. Bagaimana denganmu?</p>
+                <p class="font-margin-top">Yuk, hitung sekarang di kalkulator BMI.</p>
+            </article>
+
+            <!-- Form -->
+            <section>
+                <form id="bmi-form">
+                    <div>
+                        <div class="font-bold">Jenis Kelamin</div>
+                        <input type="radio" id="selection-man" name="jeniskelamin">
+                        <label for="selection-man" class="font-bold">Pria</label>
+                        <input type="radio" id="selection-woman" name="jeniskelamin">
+                        <label for="selection-woman" class="font-bold">Wanita</label>
+                    </div>
+                    <div>
+                        <label for="input-berat-badan" class="font-bold">Berat Badan (kg)</label>
+                        <input type="number" id="input-berat-badan">
+                    </div>
+                    <div>
+                        <label for="input-usia" class="font-bold">Usia (tahun)</label>
+                        <input type="number" id="input-usia">
+                    </div>
+                    <div>
+                        <label for="input-tinggi-badan" class="font-bold">Tinggi Badan (cm)</label>
+                        <input type="number" id="input-tinggi-badan">
+                    </div>
+                    <div>
+                        <button type="button" class="button color" id="hitung-button">Hitung BMI</button>
+                        <button type="button" class="button reset" id="reset-button">Reset</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Form Article -->
+            <article>
+                <header>
+                    <h3 class="font-weight">Keunggulan fitur</h3>
+                </header>
+                
+                <p class="font-margin">1. Menghitung berat badan</p>
+                <p class="font-margin">2. Menentukan kategori berat badan ideal atau tidak</p>
+                <p class="font-margin">3. Mempersiapkan program penurunan berat badan</p>
+
+                <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+
+                <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan anda dengan nilia umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M2.</p>
+            </article>
+        </section>
+
+        <!-- Right Content -->
+        <section class="main-content">
+            <!-- result article -->
+            <article>
+                <header>
+                    <h2 class="font-weight">Hasil</h2>
+                </header>
+
+                <!-- result section -->
+                <section class="result-section" style="display: none;">
+                    <h3 class="font-weight">Hasil</h3>
+                    <p><strong>BMI:</strong> <span id="hasil-bmi">0.0</span></p>
+                    <p><strong>Kategori:</strong> <span id="kategori-bmi"></span></p>
+                    <p><strong>Usia:</strong> <span class="data-user usia"></span> tahun</p>
+                    <p><strong>Jenis Kelamin:</strong> <span class="data-user jenis-kelamin"></span></p>
+
+                    <div>
+                        <button class="button color">Download Hasil BMI</button>
+                    </div>
+                 </section>
+
+                <!-- result article -->
+                 <article>
+                    <p>Hasil BMI diantara 23 dan 25</p>
+
+                    <p class="font-margin">Anda berada dalam kategori overweight atau berat badan berlebih.</p>
+                    <p class="font-margin">Cara terbaik untuk menurunkan berat badan adalah dengan dengan mengatur kalor makanan yang dikonsumsi dan berolahraga.</p>
+                    <p class="font-margin-top">Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+                    
+                    <div>
+                        <button class="button color">Konsultasi Ahli Gizi Via Aplikasi</button>
+                        <button class="button color">Registrasi Online Ahli Gizi</button>
+                    </div>
+
+                    <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan anda.</p>
+                 </article>
+
+                 <!-- general information -->
+                  <section class="result-section">
+                    <h3 class="font-weight">Beberapa penyakit yang berasal dari kegemukan</h3>
+
+                    <p class="font-margin">Diabetes</p>
+                    <p class="font-margin">Hipertensi</p>
+                    <p class="font-margin">Sakit Jantung</p>
+                    <p class="font-margin-top">Osteoarthritis</p>
+
+                    <div>
+                        <button class="button color">Konsultasi Dokter Via Aplikasi</button>
+                        <button class="button color">Registrasi Online Sekarang</button>
+                    </div>
+                  </section>
+            </article>
+        </section>
+    </main>
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
